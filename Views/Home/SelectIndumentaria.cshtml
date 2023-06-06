@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "SelectIndumentaria";
+}
+
+<h1>ROPA</h1>
+<div class="div1">
+    <form action='@Url.Action("GuardarIndumentaria", "Home")'>
+        
+        <br>
+        @foreach (string item in ViewBag.camisetas)
+        {
+         <img src="/IMG/CAM/@item" alt="">
+        }
+        <select name="Remera" type="number" required>
+            @for(int i = 0; i<10; i++){
+            <option value="@(i+1)">@ViewBag.Equipos[i]</option>
+            }
+        </select>
+        <br>
+        <P>Ahora a elegir el pantalon!</P>
+        @foreach (string item in ViewBag.pantalones)
+        {
+            <img src="/IMG/CAM/PANT/@item" alt="">
+        }
+       
+           <select name="Remera" type="number" required>
+            @for(int i = 0; i<10; i++){
+            <option value="@(i+1)">@ViewBag.Equipos[i]</option>
+            }
+        </select>
+        <br>
+        <P>Ahora a elegir las medias!</P>
+        @foreach (string item in ViewBag.medias)
+        {
+           <img src="/IMG/CAM/MED/@item" alt="">
+        }
+        
+           <select name="Remera" type="number" required>
+            @for(int i = 0; i < 10; i++){
+            <option value="@(i+1)">@ViewBag.Equipos[i]</option>
+            }
+        </select>
+        <br>
+       
+        <input type="submit">
+          
+            
+        </select>
+    </form>
+</div>    
